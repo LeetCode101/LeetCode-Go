@@ -3,6 +3,6 @@ environment:
   GOPATH: c:\gopath
 stack:
   - go 1.10
-  - go 1.11
+  - go 1.x
 test_script:
   - go test ./...
