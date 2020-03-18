@@ -4,4 +4,5 @@ environment:
 stack:
   - go 1.x
 test_script:
+  - go version
   - go test ./...
