@@ -1,6 +1,8 @@
 build: off
 environment:
   GOPATH: c:\gopath
-stack: go 1.10
+stack:
+  - go 1.10
+  - go 1.11
 test_script:
   - go test ./...
