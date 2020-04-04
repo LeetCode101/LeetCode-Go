@@ -1,7 +1,7 @@
 package algorithms
 
 /*
-Definition for singly-linked list.
+ListNode represents for definition for singly-linked list.
 */
 type ListNode struct {
 	Val  int
