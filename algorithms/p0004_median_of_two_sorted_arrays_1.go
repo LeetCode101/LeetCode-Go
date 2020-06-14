@@ -10,7 +10,7 @@ func findMedianSortedArrays1(nums1 []int, nums2 []int) float64 {
 
 	if len(mergedNumbers)%2 == 1 {
 		return float64(mergedNumbers[middle])
-	} else {
-		return float64(mergedNumbers[middle-1]+mergedNumbers[middle]) / 2
 	}
+
+	return float64(mergedNumbers[middle-1]+mergedNumbers[middle]) / 2
 }
