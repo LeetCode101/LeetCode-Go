@@ -5,10 +5,10 @@ import "math"
 func findMedianSortedArrays2(nums1 []int, nums2 []int) float64 {
 	m := len(nums1)
 	n := len(nums2)
-	left := (m + n + 1) / 2
-	right := (m + n + 2) / 2
+	k1 := (m + n + 1) / 2
+	k2 := (m + n + 2) / 2
 
-	return float64(findKth(nums1, 0, nums2, 0, left)+findKth(nums1, 0, nums2, 0, right)) / 2.0
+	return float64(findKth(nums1, 0, nums2, 0, k1)+findKth(nums1, 0, nums2, 0, k2)) / 2.0
 }
 
 func findKth(nums1 []int, i int, nums2 []int, j int, k int) int {
@@ -37,7 +37,7 @@ func findKth(nums1 []int, i int, nums2 []int, j int, k int) int {
 
 	if middleValue1 < middleValue2 {
 		return findKth(nums1, i+k/2, nums2, j, k-k/2)
-	} else {
-		return findKth(nums1, i, nums2, j+k/2, k-k/2)
 	}
+
+	return findKth(nums1, i, nums2, j+k/2, k-k/2)
 }
