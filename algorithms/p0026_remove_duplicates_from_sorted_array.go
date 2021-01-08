@@ -1,6 +1,10 @@
 package algorithms
 
 func removeDuplicates(nums []int) int {
+	if len(nums) == 0 {
+		return 0
+	}
+
 	tail := 0
 
 	for i := 0; i < len(nums); i++ {
@@ -10,9 +14,5 @@ func removeDuplicates(nums []int) int {
 		}
 	}
 
-	if len(nums) == 0 {
-		return 0
-	} else {
-		return tail + 1
-	}
+	return tail + 1
 }
