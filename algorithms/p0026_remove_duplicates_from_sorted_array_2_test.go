@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestRemoveDuplicatesFromSortedArray(t *testing.T) {
+func TestRemoveDuplicatesFromSortedArray2(t *testing.T) {
 	assert.Equal(t, 0, removeDuplicates2([]int{}))
 	assert.Equal(t, 2, removeDuplicates2([]int{1, 1, 2}))
 }
