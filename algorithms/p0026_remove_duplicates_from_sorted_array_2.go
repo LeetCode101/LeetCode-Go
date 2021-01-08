@@ -1,6 +1,6 @@
 package algorithms
 
-func removeDuplicates(nums []int) int {
+func removeDuplicates2(nums []int) int {
 	if len(nums) == 0 {
 		return 0
 	}

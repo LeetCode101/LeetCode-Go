@@ -6,6 +6,6 @@ import (
 )
 
 func TestRemoveDuplicatesFromSortedArray(t *testing.T) {
-	assert.Equal(t, 0, removeDuplicates([]int{}))
-	assert.Equal(t, 2, removeDuplicates([]int{1, 1, 2}))
+	assert.Equal(t, 0, removeDuplicates2([]int{}))
+	assert.Equal(t, 2, removeDuplicates2([]int{1, 1, 2}))
 }
