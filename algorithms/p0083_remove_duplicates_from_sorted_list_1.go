@@ -1,6 +1,6 @@
 package algorithms
 
-func deleteDuplicates(head *ListNode) *ListNode {
+func deleteDuplicates1(head *ListNode) *ListNode {
 	if head == nil {
 		return nil
 	}
