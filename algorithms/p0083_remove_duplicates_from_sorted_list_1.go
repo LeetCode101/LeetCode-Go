@@ -13,7 +13,7 @@ func deleteDuplicates1(head *ListNode) *ListNode {
 			tail.Next = current
 			tail = current
 		} else {
-			tail.Next = nil
+			tail.Next = current.Next
 		}
 
 		current = current.Next
