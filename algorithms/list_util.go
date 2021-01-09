@@ -1,7 +1,7 @@
 package algorithms
 
 func convertListToArray(head *ListNode) []int {
-	var values []int
+	values := []int{}
 
 	for head != nil {
 		values = append(values, head.Val)
