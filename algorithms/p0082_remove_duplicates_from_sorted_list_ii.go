@@ -7,12 +7,10 @@ func deleteDuplicatesII(head *ListNode) *ListNode {
 	tail := dummy
 
 	for current != nil && current.Next != nil {
-		if current.Val == current.Next.Val {
-			for current != nil && current.Next != nil && current.Val == current.Next.Val {
-				current = current.Next
-			}
+		currentValue := current.Val
 
-			if current != nil {
+		if current.Next.Val == currentValue {
+			for current != nil && current.Val == currentValue {
 				current = current.Next
 			}
 
