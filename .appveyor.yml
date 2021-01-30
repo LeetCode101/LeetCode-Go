@@ -3,8 +3,10 @@ environment:
   GOPATH: c:\gopath
 stack:
   - go 1.x
+before_test:
+  - choco install codecov
 test_script:
   - go version
   - go test ./... -race -coverprofile=coverage.txt -covermode=atomic
 after_test:
-  - ps: bash <(curl -s https://codecov.io/bash)
+  - codecov
