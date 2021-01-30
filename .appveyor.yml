@@ -9,4 +9,4 @@ test_script:
   - go version
   - go test ./... -race -coverprofile=coverage.txt -covermode=atomic
 after_test:
-  - codecov
+  - codecov -f coverage.txt
