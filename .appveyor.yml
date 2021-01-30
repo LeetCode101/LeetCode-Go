@@ -7,4 +7,4 @@ test_script:
   - go version
   - go test ./... -race -coverprofile=coverage.txt -covermode=atomic
 after_test:
-  - bash <(curl -s https://codecov.io/bash)
+  - sh: bash <(curl -s https://codecov.io/bash)
