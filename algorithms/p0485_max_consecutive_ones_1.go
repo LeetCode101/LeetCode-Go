@@ -2,7 +2,7 @@ package algorithms
 
 import "math"
 
-func findMaxConsecutiveOnes(nums []int) int {
+func findMaxConsecutiveOnes1(nums []int) int {
 	maxCount := 0
 	countSoFar := 0
 
