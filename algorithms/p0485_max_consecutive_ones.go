@@ -8,14 +8,12 @@ func findMaxConsecutiveOnes(nums []int) int {
 
 	for _, n := range nums {
 		if n == 0 {
-			maxCount = int(math.Max(float64(maxCount), float64(countSoFar)))
 			countSoFar = 0
 		} else {
 			countSoFar += 1
+			maxCount = int(math.Max(float64(maxCount), float64(countSoFar)))
 		}
 	}
-
-	maxCount = int(math.Max(float64(maxCount), float64(countSoFar)))
 
 	return maxCount
 }
