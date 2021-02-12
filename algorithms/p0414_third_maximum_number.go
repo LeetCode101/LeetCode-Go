@@ -22,7 +22,7 @@ func thirdMax(nums []int) int {
 
 	if max3 != math.MinInt64 {
 		return max3
-	} else {
-		return max1
 	}
+
+	return max1
 }
