@@ -6,5 +6,5 @@ import (
 )
 
 func TestMaxConsecutiveOnesII(t *testing.T) {
-	assert.Equal(t, 4, findMaxConsecutiveOnes([]int{1, 0, 1, 1, 0}))
+	assert.Equal(t, 4, findMaxConsecutiveOnesII([]int{1, 0, 1, 1, 0}))
 }
