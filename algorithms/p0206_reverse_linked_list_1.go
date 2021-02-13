@@ -1,6 +1,6 @@
 package algorithms
 
-func reverseList(head *ListNode) *ListNode {
+func reverseList1(head *ListNode) *ListNode {
 	var prev *ListNode
 	current := head
 
