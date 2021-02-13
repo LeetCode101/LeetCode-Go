@@ -1,6 +1,6 @@
 package algorithms
 
-func reverseBetween(head *ListNode, m int, n int) *ListNode {
+func reverseBetween1(head *ListNode, m int, n int) *ListNode {
 	dummy := &ListNode{-1, head}
 	tailOfLeft := dummy
 	current := head

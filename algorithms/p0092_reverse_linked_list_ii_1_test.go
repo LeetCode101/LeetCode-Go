@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestReverseLinkedListII(t *testing.T) {
+func TestReverseLinkedListII1(t *testing.T) {
 	a := &ListNode{1, nil}
 	b := &ListNode{2, nil}
 	c := &ListNode{3, nil}
@@ -16,5 +16,5 @@ func TestReverseLinkedListII(t *testing.T) {
 	c.Next = d
 	d.Next = e
 
-	assert.Equal(t, []int{1, 4, 3, 2, 5}, convertListToArray(reverseBetween(a, 2, 4)))
+	assert.Equal(t, []int{1, 4, 3, 2, 5}, convertListToArray(reverseBetween1(a, 2, 4)))
 }
