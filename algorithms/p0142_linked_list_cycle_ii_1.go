@@ -7,10 +7,10 @@ func detectCycle1(head *ListNode) *ListNode {
 	for current != nil && current.Next != nil {
 		if visited[current.Next] {
 			return current.Next
-		} else {
-			visited[current] = true
-			current = current.Next
 		}
+
+		visited[current] = true
+		current = current.Next
 	}
 
 	return nil
