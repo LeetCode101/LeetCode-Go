@@ -10,10 +10,12 @@ func TestLinkedListCycle(t *testing.T) {
 	b := &ListNode{2, nil}
 	c := &ListNode{0, nil}
 	d := &ListNode{-4, nil}
+	e := &ListNode{5, nil}
 	a.Next = b
 	b.Next = c
 	c.Next = d
 	d.Next = b
 
 	assert.True(t, hasCycle(a))
+	assert.False(t, hasCycle(e))
 }
