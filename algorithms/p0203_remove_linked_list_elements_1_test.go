@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestRemoveLinkedListElements(t *testing.T) {
+func TestRemoveLinkedListElements1(t *testing.T) {
 	a := &ListNode{1, nil}
 	b := &ListNode{2, nil}
 	c := &ListNode{6, nil}
@@ -20,5 +20,5 @@ func TestRemoveLinkedListElements(t *testing.T) {
 	e.Next = f
 	f.Next = g
 
-	assert.Equal(t, []int{1, 2, 3, 4, 5}, convertListToArray(removeElements(a, 6)))
+	assert.Equal(t, []int{1, 2, 3, 4, 5}, convertListToArray(removeElements1(a, 6)))
 }

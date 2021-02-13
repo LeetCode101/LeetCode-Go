@@ -1,6 +1,6 @@
 package algorithms
 
-func removeElements(head *ListNode, val int) *ListNode {
+func removeElements1(head *ListNode, val int) *ListNode {
 	dummy := &ListNode{-1, head}
 	prev := dummy
 	current := head
