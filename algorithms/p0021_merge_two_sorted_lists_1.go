@@ -1,6 +1,6 @@
 package algorithms
 
-func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
+func mergeTwoLists1(l1 *ListNode, l2 *ListNode) *ListNode {
 	dummy := &ListNode{-1, nil}
 	current := dummy
 	current1 := l1
