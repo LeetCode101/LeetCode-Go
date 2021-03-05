@@ -1,6 +1,6 @@
 package algorithms
 
-func addTwoNumbersII(l1 *ListNode, l2 *ListNode) *ListNode {
+func addTwoNumbersII1(l1 *ListNode, l2 *ListNode) *ListNode {
 	l1 = reverseList(l1)
 	l2 = reverseList(l2)
 
