@@ -6,8 +6,8 @@ import (
 )
 
 func TestAddTwoNumbersII(t *testing.T) {
-	l1 := &ListNode{7, &ListNode{2, &ListNode{4, &ListNode{3, nil}}}}
-	l2 := &ListNode{5, &ListNode{6, &ListNode{4, nil}}}
+	l1 := &ListNode{9, &ListNode{2, &ListNode{4, &ListNode{3, nil}}}}
+	l2 := &ListNode{9, &ListNode{6, &ListNode{4, nil}}}
 
-	assert.Equal(t, []int{7, 8, 0, 7}, convertListToArray(addTwoNumbersII(l1, l2)))
+	assert.Equal(t, []int{1, 0, 2, 0, 7}, convertListToArray(addTwoNumbersII(l1, l2)))
 }
