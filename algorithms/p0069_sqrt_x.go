@@ -9,9 +9,9 @@ func mySqrt(x int) int {
 		value := middle * middle
 
 		if value > x {
-			high -= 1
+			high = middle - 1
 		} else if value < x {
-			low += 1
+			low  = middle + 1
 		} else {
 			return middle
 		}
