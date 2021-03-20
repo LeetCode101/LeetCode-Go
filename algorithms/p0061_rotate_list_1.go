@@ -1,6 +1,6 @@
 package algorithms
 
-func rotateRight(head *ListNode, k int) *ListNode {
+func rotateRight1(head *ListNode, k int) *ListNode {
 	if head == nil {
 		return nil
 	}
