@@ -1,7 +1,7 @@
 package algorithms
 
 /*
-Definition for a Node.
+Node definition.
 */
 type Node struct {
 	Val    int
