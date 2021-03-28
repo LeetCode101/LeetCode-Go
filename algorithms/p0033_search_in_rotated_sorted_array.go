@@ -6,16 +6,15 @@ func search(nums []int, target int) int {
 
 	for low <= high {
 		middle := low + (high-low)/2
-		value := nums[middle]
 
-		if value > target {
-			if value < nums[high] || nums[high] < target {
+		if nums[middle] > target {
+			if nums[middle] < nums[high] || nums[high] < target {
 				high = middle - 1
 			} else {
 				low = middle + 1
 			}
-		} else if value < target {
-			if value >= nums[high] || nums[high] >= target {
+		} else if nums[middle] < target {
+			if nums[middle] >= nums[high] || nums[high] >= target {
 				low = middle + 1
 			} else {
 				high = middle - 1
