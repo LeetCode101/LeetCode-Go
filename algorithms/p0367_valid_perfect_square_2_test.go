@@ -5,6 +5,6 @@ import (
 	"testing"
 )
 
-func TestValidPerfectSquare1(t *testing.T) {
-	assert.True(t, isPerfectSquare1(4))
+func TestValidPerfectSquare2(t *testing.T) {
+	assert.True(t, isPerfectSquare2(4))
 }

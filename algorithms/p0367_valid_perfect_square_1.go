@@ -1,6 +1,6 @@
 package algorithms
 
-func isPerfectSquare(num int) bool {
+func isPerfectSquare1(num int) bool {
 	low := 0
 	high := num
 
