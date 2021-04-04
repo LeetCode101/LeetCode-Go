@@ -11,7 +11,7 @@ func myPow2(x float64, n int) float64 {
 func pow2(x float64, n int) float64 {
 	pow := 1.0
 
-	for n >= 0 {
+	for n > 0 {
 		if n&1 == 1 {
 			pow *= x
 			n -= 1
