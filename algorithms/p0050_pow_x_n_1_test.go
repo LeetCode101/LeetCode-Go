@@ -5,6 +5,6 @@ import (
 	"testing"
 )
 
-func TestPow(t *testing.T) {
-	assert.Equal(t, 1024.0, myPow(2, 10))
+func TestPow1(t *testing.T) {
+	assert.Equal(t, 1024.0, myPow1(2, 10))
 }
