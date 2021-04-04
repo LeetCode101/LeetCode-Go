@@ -1,7 +1,7 @@
 package algorithms
 
 func isPerfectSquare(num int) bool {
-	low := 1
+	low := 0
 	high := num
 
 	for low <= high {
