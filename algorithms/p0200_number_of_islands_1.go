@@ -1,5 +1,8 @@
 package algorithms
 
+/**
+Must change grid[i][j] == 1 to grid[i][j] == '1' on LeetCode.
+ */
 func numIslands1(grid [][]byte) int {
 	if grid == nil || len(grid) == 0 {
 		return 0
@@ -30,6 +33,7 @@ func numIslands1(grid [][]byte) int {
 func dfs(grid [][]byte, row int, column int, visited [][]bool) {
 	m := len(grid)
 	n := len(grid[0])
+	directions := [][]int{{1, 0}, {0, 1}, {-1, 0}, {0, -1}}
 
 	if row < 0 || row >= m || column < 0 || column >= n || grid[row][column] != 1 || visited[row][column] {
 		return
@@ -37,8 +41,7 @@ func dfs(grid [][]byte, row int, column int, visited [][]bool) {
 
 	visited[row][column] = true
 
-	dfs(grid, row-1, column, visited)
-	dfs(grid, row+1, column, visited)
-	dfs(grid, row, column-1, visited)
-	dfs(grid, row, column+1, visited)
+	for _, direction := range directions {
+		dfs(grid, row+direction[0], column+direction[1], visited)
+	}
 }

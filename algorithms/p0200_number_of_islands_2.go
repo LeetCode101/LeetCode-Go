@@ -1,5 +1,8 @@
 package algorithms
 
+/**
+Must change grid[i][j] == 1 to grid[i][j] == '1' on LeetCode.
+*/
 func numIslands2(grid [][]byte) int {
 	if grid == nil || len(grid) == 0 {
 		return 0
