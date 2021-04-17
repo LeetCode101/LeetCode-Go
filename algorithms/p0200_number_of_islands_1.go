@@ -1,6 +1,6 @@
 package algorithms
 
-func numIslands(grid [][]byte) int {
+func numIslands1(grid [][]byte) int {
 	count := 0
 	m := len(grid)
 	n := len(grid[0])
