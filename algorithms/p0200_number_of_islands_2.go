@@ -33,7 +33,7 @@ func numIslands2(grid [][]byte) int {
 					for _, direction := range directions {
 						nextRow, nextColumn := row+direction[0], column+direction[1]
 
-						if nextRow < 0 || nextRow >= m || nextColumn < 0 || nextColumn >= n || grid[nextRow][nextColumn] != 1 || visited[nextRow][nextColumn] {
+						if !isValid(grid, nextRow, nextColumn, visited) {
 							continue
 						}
 
@@ -46,4 +46,11 @@ func numIslands2(grid [][]byte) int {
 	}
 
 	return count
+}
+
+func isValid(grid [][]byte, row int, column int, visited [][]bool) bool {
+	m := len(grid)
+	n := len(grid[0])
+
+	return !(row < 0 || row >= m || column < 0 || column >= n || grid[row][column] != 1 || visited[row][column])
 }
