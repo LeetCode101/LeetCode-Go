@@ -30,14 +30,12 @@ func numIslands2(grid [][]byte) int {
 					for _, direction := range directions {
 						nextRow, nextColumn := row+direction[0], column+direction[1]
 
-						if nextRow < 0 || nextRow >= m || nextColumn < 0 || nextColumn >= n {
+						if nextRow < 0 || nextRow >= m || nextColumn < 0 || nextColumn >= n || grid[nextRow][nextColumn] != 1 || visited[nextRow][nextColumn] {
 							continue
 						}
 
-						if grid[nextRow][nextColumn] == 1 {
-							queue = append(queue, [2]int{nextRow, nextColumn})
-							visited[nextRow][nextColumn] = true
-						}
+						queue = append(queue, [2]int{nextRow, nextColumn})
+						visited[nextRow][nextColumn] = true
 					}
 				}
 			}
