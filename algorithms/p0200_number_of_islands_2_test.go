@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestNumberOfIslands1(t *testing.T) {
+func TestNumberOfIslands2(t *testing.T) {
 	grid := [][]byte{
 		{1, 1, 0, 0, 0},
 		{1, 1, 0, 0, 0},
@@ -13,6 +13,6 @@ func TestNumberOfIslands1(t *testing.T) {
 		{0, 0, 0, 1, 1},
 	}
 
-	assert.Equal(t, 0, numIslands1(nil))
-	assert.Equal(t, 3, numIslands1(grid))
+	assert.Equal(t, 0, numIslands2(nil))
+	assert.Equal(t, 3, numIslands2(grid))
 }

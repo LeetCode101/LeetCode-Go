@@ -1,6 +1,10 @@
 package algorithms
 
 func numIslands1(grid [][]byte) int {
+	if grid == nil || len(grid) == 0 {
+		return 0
+	}
+
 	count := 0
 	m := len(grid)
 	n := len(grid[0])
@@ -12,7 +16,7 @@ func numIslands1(grid [][]byte) int {
 
 	for i := 0; i < m; i++ {
 		for j := 0; j < n; j++ {
-			if grid[i][j] == '1' && !visited[i][j] {
+			if grid[i][j] == 1 && !visited[i][j] {
 				count += 1
 
 				dfs(grid, i, j, visited)
@@ -27,7 +31,7 @@ func dfs(grid [][]byte, row int, column int, visited [][]bool) {
 	m := len(grid)
 	n := len(grid[0])
 
-	if row < 0 || row >= m || column < 0 || column >= n || grid[row][column] != '1' || visited[row][column] {
+	if row < 0 || row >= m || column < 0 || column >= n || grid[row][column] != 1 || visited[row][column] {
 		return
 	}
 
