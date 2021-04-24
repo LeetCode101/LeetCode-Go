@@ -15,9 +15,9 @@ func clone(node *graph.Node, visited map[*graph.Node]*graph.Node) *graph.Node {
 
 	if currentNode, ok := visited[node]; ok {
 		return currentNode
-	} else {
-		visited[node] = &graph.Node{Val: node.Val}
 	}
+
+	visited[node] = &graph.Node{Val: node.Val}
 
 	for _, neighbour := range node.Neighbors {
 		visited[node].Neighbors = append(visited[node].Neighbors, clone(neighbour, visited))
