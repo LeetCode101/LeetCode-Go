@@ -2,7 +2,7 @@ package algorithms
 
 import "leetcode/algorithms/graph"
 
-func cloneGraph(node *graph.Node) *graph.Node {
+func cloneGraph1(node *graph.Node) *graph.Node {
 	visited := make(map[*graph.Node]*graph.Node)
 
 	return clone(node, visited)

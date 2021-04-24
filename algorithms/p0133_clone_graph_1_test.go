@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func TestCloneGraph(t *testing.T) {
+func TestCloneGraph1(t *testing.T) {
 	a := &graph.Node{Val: 1}
 	b := &graph.Node{Val: 2}
 	c := &graph.Node{Val: 3}
@@ -16,6 +16,6 @@ func TestCloneGraph(t *testing.T) {
 	c.Neighbors = []*graph.Node{b, d}
 	d.Neighbors = []*graph.Node{a, c}
 
-	assert.Nil(t, cloneGraph(nil))
-	assert.Equal(t, 1, cloneGraph(a).Val)
+	assert.Nil(t, cloneGraph1(nil))
+	assert.Equal(t, 1, cloneGraph1(a).Val)
 }
